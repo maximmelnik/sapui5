@@ -6,9 +6,6 @@ sap.ui.controller("tablesdemo1.tableSimple", {
 * @memberOf tablesdemo1.tableSimple
 */
 	onInit: function() {
-				
-		var page = sap.ui.view({id:"idtableSimple2", viewName:"tablesdemo1.view2", type:sap.ui.core.mvc.ViewType.JS});
-		app.addPage(page);
 		
 		// json data
 		var oData = {
@@ -40,20 +37,6 @@ sap.ui.controller("tablesdemo1.tableSimple", {
 	    sap.ui.getCore().setModel(oModel);
 	},
 
-	
-	goToNextPage: function(oEvt) {
-		
-		var sValue = oEvt.getParameters().rowBindingContext.getProperty("Name");
-		
-		if (sValue !== undefined) {	
-			var data = {
-				"data": sValue
-			};	
-			sap.ui.getCore().setModel(new sap.ui.model.json.JSONModel(data), "label");
-			app.to("idtableSimple2")
-		}
-		
-	},
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 * (NOT before the first rendering! onInit() is used for that one!).

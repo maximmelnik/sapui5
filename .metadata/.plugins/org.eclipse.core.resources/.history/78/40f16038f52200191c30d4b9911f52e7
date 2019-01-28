@@ -36,8 +36,7 @@ sap.ui.jsview("tablesdemo1.tableSimple", {
 	    });
 	    
 	    var oTable = new sap.ui.table.Table({
-	    	columns:[oCol1, oCol2, oCol3],
-	        cellClick:[oController.goToNextPage, oController]
+	    	columns:[oCol1, oCol2, oCol3]
 	    }); 
 	    
 	    oTable.bindRows("/names");	

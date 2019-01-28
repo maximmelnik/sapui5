@@ -334,3 +334,23 @@ java.net.UnknownHostException: archive.eclipse.org
 	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
 	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY com.sap.ide.ui5.app 1 0 2019-01-28 15:53:37.174
+!MESSAGE Started Server for URL: http://localhost:60488/DemoProjects1/index.html
+
+!ENTRY com.sap.ide.ui5.app.plugin 1 0 2019-01-28 15:54:05.246
+!MESSAGE Stopped Server
+
+!ENTRY org.eclipse.core.resources 2 2 2019-01-28 15:55:01.740
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2019-01-28 15:55:01.740
+!MESSAGE The project description file (.project) for 'RemoteSystemsTempFiles' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY com.sap.ide.ui5.app 1 0 2019-01-28 16:06:00.019
+!MESSAGE Started Server for URL: http://localhost:61672/DemoProjects1/index.html
+
+!ENTRY com.sap.ide.ui5.app.plugin 1 0 2019-01-28 16:06:04.745
+!MESSAGE Stopped Server
+
+!ENTRY com.sap.ide.ui5.app 1 0 2019-01-28 16:06:09.894
+!MESSAGE Started Server for URL: http://localhost:61693/tablesDemo1/index.html
