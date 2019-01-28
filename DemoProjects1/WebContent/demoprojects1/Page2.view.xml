@@ -1,0 +1,23 @@
+<mvc:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	controllerName="demoprojects1.Page2" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<FeedInput
+			post="onPost"
+			class="sapUiSmallMarginTopBottom"
+			placeholder="Post comments here"
+	/>
+	<List
+		showSeparators="Inner"
+		items="{/EntryCollection}" >
+		<FeedListItem
+			sender="{Author}"
+			senderPress="onSenderPress"
+			iconPress="onIconPress"
+			iconDensityAware="false"
+			timestamp="{Date}"
+			text="{Text}"
+			convertLinksToAnchorTags="All"/>
+	</List>	
+</mvc:View>
