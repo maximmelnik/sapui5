@@ -1136,3 +1136,33 @@ java.lang.ClassCastException: class org.eclipse.wst.jsdt.core.dom.EmptyStatement
 
 !ENTRY com.sap.ide.ui5.app 1 0 2019-02-11 16:18:53.397
 !MESSAGE Started Server for URL: http://localhost:60191/masterDetailDemo/index.html
+
+!ENTRY com.sap.ide.ui5.app.plugin 1 0 2019-02-11 16:58:46.916
+!MESSAGE Stopped Server
+
+!ENTRY com.sap.ide.ui5.app 1 0 2019-02-11 18:25:05.889
+!MESSAGE Started Server for URL: http://localhost:54617/masterDetailDemo/index.html
+
+!ENTRY com.sap.ide.ui5.app.plugin 1 0 2019-02-11 18:25:14.856
+!MESSAGE Stopped Server
+
+!ENTRY com.sap.ide.ui5.app 1 0 2019-02-11 18:25:47.361
+!MESSAGE Started Server for URL: http://localhost:54680/masterDetailDemo/index.html
+
+!ENTRY com.sap.ide.ui5.app.plugin 1 0 2019-02-11 18:28:17.641
+!MESSAGE Stopped Server
+
+!ENTRY com.sap.ide.ui5.app 1 0 2019-02-12 14:15:04.381
+!MESSAGE Started Server for URL: http://localhost:57422/masterDetailDemo/index.html
+
+!ENTRY com.sap.ide.ui5.app.plugin 1 0 2019-02-12 14:18:17.903
+!MESSAGE Stopped Server
+
+!ENTRY com.sap.ide.ui5.app 1 0 2019-02-12 14:18:35.071
+!MESSAGE Started Server for URL: http://localhost:57743/i18nDemo/index.html
+
+!ENTRY com.sap.ide.ui5.app.plugin 1 0 2019-02-12 15:01:08.503
+!MESSAGE Stopped Server
+
+!ENTRY com.sap.ide.ui5.app 1 0 2019-02-12 15:52:14.008
+!MESSAGE Started Server for URL: http://localhost:49465/barchart/index.html
