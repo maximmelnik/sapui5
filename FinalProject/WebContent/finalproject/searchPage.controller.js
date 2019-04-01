@@ -5,15 +5,20 @@ sap.ui.controller("finalproject.searchPage", {
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 * @memberOf finalproject.searchPage
 */
-	onInit: function() {
-		console.log("init");
-		//var sUrl = "http://services.odata.org/V3/OData/OData.svc/Products?$format=json";
-		var sUrl = "https://services.odata.org/V3/OData/OData.svc/Products?$format=json"
+	onInit: function() {		
+		/* For example I got another service with People; the link is worked. */
 		//var sUrl = "https://services.odata.org/TripPinRESTierService/(S(02al1meyki4faim2lpfcvyet))/People?$format=json";
+		
+		console.log("init controller : searching page");
+		var sUrl = "https://services.odata.org/V3/OData/OData.svc/Products?$format=json"
+	    //var sUrl = "https://services.odata.org/TripPinRESTierService/(S(02al1meyki4faim2lpfcvyet))/People?$format=json";
 		var oModel = new sap.ui.model.json.JSONModel(sUrl);
 		sap.ui.getCore().setModel(oModel,"list");
 	},
-
+	
+	goToDetails: function(oEvt) {
+		sap.m.MessageToast.show("Clicked on item!!!");
+	}
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 * (NOT before the first rendering! onInit() is used for that one!).

@@ -10,7 +10,7 @@ sap.ui.controller("finalproject.homePage", {
 		// 1. Define the path to the file with properties
 		var i18nPath = "i18n/i18n.properties";
 		// 2. Define the model for the file how to Resource Model
-		var i18nModel = sap.ui.model.resource.ResourceModel({
+		var i18nModel = new sap.ui.model.resource.ResourceModel({
 			bundleUrl: i18nPath
 		});
 		// 3. Set the resource model by sap.ui.getCore().setModel()

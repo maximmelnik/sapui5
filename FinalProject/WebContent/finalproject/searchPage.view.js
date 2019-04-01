@@ -25,19 +25,17 @@ sap.ui.jsview("finalproject.searchPage", {
 			}) ]
 
 		});
-		
-		var oList = new sap.m.List();
+		var oList = new sap.m.List({
+			itemPress: [oController.goToDetails, oController]
+		});
 		oList.bindItems({
-			path:"{list>/value}",
+			path:"list>/value",
 			template: new sap.m.StandardListItem({
 				title: "{list>Name}",
 				description: "{list>Description}",
-				//title: "{list>FirstName}",
-				//description: "{list>LastName}",
 				type: sap.m.ListType.Navigation
 			})
-		});
-		
+		});	
 		var oPage = new sap.m.Page({
 			title: "{i18n>app_head}",
 			showSubHeader: true,
