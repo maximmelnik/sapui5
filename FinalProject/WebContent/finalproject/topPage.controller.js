@@ -5,9 +5,11 @@ sap.ui.controller("finalproject.topPage", {
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 * @memberOf finalproject.topPage
 */
-//	onInit: function() {
-//
-//	},
+	onInit: function() {
+		var sUrl = "https://services.odata.org/V3/OData/OData.svc/Products?$format=json&$top=5&$select=Description,Rating";
+		var modelChart = new sap.ui.model.json.JSONModel(sUrl);
+		sap.ui.getCore().setModel(modelChart, "bar");
+	}
 
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

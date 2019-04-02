@@ -25,11 +25,46 @@ sap.ui.jsview("finalproject.topPage", {
 			}) ]
 
 		});
+		
+		var oVizFram = new sap.viz.ui5.controls.VizFrame();
+		
+		var oDataset = new sap.viz.ui5.data.FlattenedDataset({
+			dimensions : [ {
+				name : "Name",
+				value : "{bar>Description}"
+			} ],
+			measures : [ {
+				name : "Rating",
+				value : "{bar>Rating}"
+			} ],
+			data : {
+				path : "bar>/value"
+			}
+		});
+				
+		var oFeedValueAxis = new sap.viz.ui5.controls.common.feeds.FeedItem({
+			'uid': "valueAxis",
+			'type': "Measure",
+			'values' : ["Rating"]
+		});	
+		
+		var oFeedCataAxis = new sap.viz.ui5.controls.common.feeds.FeedItem({
+			'uid': "categoryAxis",
+			'type': "Dimension",
+			'values' : ["Name"]
+		});
+		
+		oVizFram.addFeed(oFeedValueAxis);
+		oVizFram.addFeed(oFeedCataAxis);
+		oVizFram.setDataset(oDataset);
+		oVizFram.setLegendVisible(false);
+		oVizFram.setVizType('stacked_column');
+				
 		var oPage = new sap.m.Page({
 			title: "{i18n>app_head}",
 			showSubHeader: true,
 			subHeader: oSubHeader,
-			content: []
+			content: [oVizFram]
 		});
 		return oPage;
 	}
