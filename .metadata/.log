@@ -2182,3 +2182,6 @@ java.lang.ClassCastException: class org.eclipse.wst.jsdt.core.dom.EmptyStatement
 
 !ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2019-04-02 15:47:54.234
 !MESSAGE No repository found at https://tools.hana.ondemand.com/.
+
+!ENTRY com.sap.ide.ui5.app.plugin 1 0 2019-04-02 17:56:52.998
+!MESSAGE Stopped Server

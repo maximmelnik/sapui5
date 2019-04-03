@@ -343,3 +343,6 @@
 2019-04-02 15:43:19,951 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@3d731388{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
 2019-04-02 15:43:19,951 [main] INFO  org.eclipse.jetty.server.session - Stopped scavenging
 2019-04-02 15:43:19,957 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.w.WebAppContext@57bd44bc{/barchart,[file:///C:/Users/User/sapui5_workspace/barchart/WebContent/],UNAVAILABLE}
+2019-04-02 17:56:52,985 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@4095c795{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+2019-04-02 17:56:52,986 [main] INFO  org.eclipse.jetty.server.session - Stopped scavenging
+2019-04-02 17:56:52,997 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.w.WebAppContext@4c2f971{/FinalProject,[file:///C:/Users/User/sapui5_workspace/FinalProject/WebContent/],UNAVAILABLE}
