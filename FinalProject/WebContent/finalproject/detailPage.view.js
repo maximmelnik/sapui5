@@ -26,13 +26,58 @@ sap.ui.jsview("finalproject.detailPage", {
 			})	
 		});
 		
-		var oList = new sap.m.List();
+		var column1 = new sap.m.Column({
+			header: new sap.m.Label({
+				text: "{i18n>tab_column_1}"
+			}),
+			
+		});
+		var column2 = new sap.m.Column({
+			header: new sap.m.Label({
+				text: "{i18n>tab_column_2}"
+			})
+		});
+		var column3 = new sap.m.Column({
+			header: new sap.m.Label({
+				text: "{i18n>tab_column_3}"
+			})
+		});
+		var column4 = new sap.m.Column({
+			header: new sap.m.Label({
+				text: "{i18n>tab_column_4}"
+			})
+		});
+		
+		var oTable = new sap.m.Table({
+			columns: [column1, column2, column3, column4]
+		});
+		
+		oTable.bindItems({
+			path: "table>/value",
+			template: new sap.m.ColumnListItem({
+				cells: [
+					new sap.m.Text({
+						text: "{table>Name}"
+					}),
+					new sap.m.Text({
+						text: "{table>Description}"
+					}),
+					new sap.m.RatingIndicator({
+						value: "{table>Rating}",
+						editable: false
+					}),
+					new sap.m.Text({
+						text: "{table>Price}"
+					}),
+				]
+			})
+		});
 		
 		var oPage = new sap.m.Page({
 			title: "{i18n>app_head}",
 			showSubHeader: true,
 			subHeader: oSubHeader,
-			content: [oList]
+			content: [oTable]
 		});
  		return oPage;
 	}

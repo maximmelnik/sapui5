@@ -13,6 +13,7 @@ sap.ui.jsview("finalproject.searchPage", {
 	* @memberOf finalproject.searchPage
 	*/ 
 	createContent : function(oController) {
+		// create the header of application with the button for come back to home of page
 		var oSubHeader = new sap.m.Bar({
 			contentLeft : [ new sap.m.Button({
 				icon : "sap-icon://nav-back",
@@ -25,9 +26,18 @@ sap.ui.jsview("finalproject.searchPage", {
 			}) ]
 
 		});
+		// create the field for searching the product name in the list
+		var oSearchField = new sap.m.SearchField({
+			id: "id_prod_search",
+			placeholder: "Please, input the product name.",
+			liveChange: [oController.liveSearch, oController]
+			
+		});
+		// create the graphical element 
 		var oList = new sap.m.List({
 			itemPress: [oController.goToDetails, oController]
 		});
+		// the binding mechanism for relation the data model with graphical element - list
 		oList.bindItems({
 			path:"list>/value",
 			template: new sap.m.StandardListItem({
@@ -36,11 +46,12 @@ sap.ui.jsview("finalproject.searchPage", {
 				type: sap.m.ListType.Navigation
 			})
 		});	
+		// create the page for showing all graphical element
 		var oPage = new sap.m.Page({
 			title: "{i18n>app_head}",
 			showSubHeader: true,
 			subHeader: oSubHeader,
-			content: [oList]
+			content: [oSearchField, oList]
 		});
 		return oPage;
 	}

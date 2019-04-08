@@ -6,7 +6,7 @@ sap.ui.controller("finalproject.topPage", {
 * @memberOf finalproject.topPage
 */
 	onInit: function() {
-		var sUrl = "https://services.odata.org/V3/OData/OData.svc/Products?$format=json&$top=5&$select=Description,Rating";
+		var sUrl = "https://services.odata.org/V3/OData/OData.svc/Products?$format=json&$top=5&$select=Name,Rating";
 		var modelChart = new sap.ui.model.json.JSONModel(sUrl);
 		sap.ui.getCore().setModel(modelChart, "bar");
 	}

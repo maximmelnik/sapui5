@@ -16,8 +16,25 @@ sap.ui.controller("finalproject.searchPage", {
 	},
 	
 	goToDetails: function(oEvt) {
+		//debugger;
+		var selectedProd = oEvt.getParameters().listItem.getProperty("title");
+		var sUrl = "https://services.odata.org/V3/OData/OData.svc/Products?$format=json&$filter=substringof('" + selectedProd + "', Name) eq true";
+		console.log(sUrl);
+		var oModel = new sap.ui.model.json.JSONModel(sUrl);
+		sap.ui.getCore().setModel(oModel,"table");	
 		app.to("iddetailPage");
+	},
+	
+	liveSearch: function(oEvt) {
+		var input_search = sap.ui.getCore().getElementById("id_prod_search").getValue();
+		if (input_search !== undefined || input_search !== "" ) {
+			var sUrl = "https://services.odata.org/V3/OData/OData.svc/Products?$format=json&$filter=substringof('" + input_search + "', Name) eq true";
+			var oModel = new sap.ui.model.json.JSONModel(sUrl);
+			sap.ui.getCore().setModel(oModel,"list");	
+		} 		
+
 	}
+	
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 * (NOT before the first rendering! onInit() is used for that one!).

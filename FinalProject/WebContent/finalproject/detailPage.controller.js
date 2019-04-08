@@ -5,9 +5,9 @@ sap.ui.controller("finalproject.detailPage", {
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 * @memberOf finalproject.detailPage
 */
-//	onInit: function() {
-//
-//	},
+	onInit: function() {
+		//sap.ui.getCore().setModel(new sap.ui.model.json.JSONModel({}),"table");
+	},
 
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

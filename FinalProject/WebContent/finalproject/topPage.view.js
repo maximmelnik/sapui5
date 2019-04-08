@@ -31,7 +31,7 @@ sap.ui.jsview("finalproject.topPage", {
 		var oDataset = new sap.viz.ui5.data.FlattenedDataset({
 			dimensions : [ {
 				name : "Name",
-				value : "{bar>Description}"
+				value : "{bar>Name}"
 			} ],
 			measures : [ {
 				name : "Rating",
@@ -58,8 +58,18 @@ sap.ui.jsview("finalproject.topPage", {
 		oVizFram.addFeed(oFeedCataAxis);
 		oVizFram.setDataset(oDataset);
 		oVizFram.setLegendVisible(false);
-		oVizFram.setVizType('stacked_column');
-				
+		oVizFram.setVizType('bar');
+		oVizFram.setWidth('100%');
+		oVizFram.setHeight('100%');
+		oVizFram.setVizProperties({
+			plotArea : {
+				primaryScale : {
+					fixedRange : true,
+					minValue : 0,
+					maxValue : 5
+				}
+			}
+		})		
 		var oPage = new sap.m.Page({
 			title: "{i18n>app_head}",
 			showSubHeader: true,
